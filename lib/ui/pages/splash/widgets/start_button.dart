@@ -13,8 +13,9 @@ class StartButton extends StatelessWidget {
         onPressed: () {
           context.router.pushNamed('/login');
         },
-        icon: Icon(AppdoptameApp.heart_1, color: ThemeColors.colorPrimary, size: 15,),
-        style: ElevatedButton.styleFrom(foregroundColor: Colors.white, shadowColor: Colors.grey),
+        icon: Icon(AppdoptameApp.paw, color: ThemeColors.colorPrimary, size: 15,),
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white, shadowColor: Colors.grey),
         label: Text(
           "Empecemos!",
           style: TextStyle(
