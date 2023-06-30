@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,15 +49,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCKEPlHJNHTtvYekR-1yP2oPR4bODtWDE0',
-    appId: '1:694238737564:web:48ed55f96d7422234f6959',
-    messagingSenderId: '694238737564',
-    projectId: 'flutter-example-riverpod',
-    authDomain: 'flutter-example-riverpod.firebaseapp.com',
-    storageBucket: 'flutter-example-riverpod.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCCldsjYmyhT9OzNkGADsuwzlXZFonDfZo',
     appId: '1:694238737564:android:33252adce7e56d694f6959',
@@ -68,15 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-example-riverpod.appspot.com',
     iosClientId: '694238737564-5bo9u8jilh73khr8r4gdjl93rtecnnjn.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterExampleRiverpod',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBddDFMbwvREk3H5WyylxPIi5t2AUOHw6s',
-    appId: '1:694238737564:ios:a1cfde27e998f4ff4f6959',
-    messagingSenderId: '694238737564',
-    projectId: 'flutter-example-riverpod',
-    storageBucket: 'flutter-example-riverpod.appspot.com',
-    iosClientId: '694238737564-ntv2mnpfc006pu8olehmepn86lqv2odm.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterExampleRiverpod.RunnerTests',
   );
 }
