@@ -42,6 +42,7 @@ dependencies:
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
   auto_route: ^7.5.0
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
