@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/register_link.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/widgets/email_field.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/widgets/login_button.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/widgets/password_field.dart';
-import 'package:flutter_example_riverpod/ui/theme/colors.dart';
+import 'package:flutter_example_riverpod/ui/pages/register/widgets/register_button.dart';
 
-class LoginCard extends StatelessWidget {
+import '../../../theme/colors.dart';
+import '../../login/widgets/email_field.dart';
+import '../../login/widgets/password_field.dart';
+
+class RegisterCard extends StatelessWidget {
   final TextEditingController passCltr = TextEditingController();
   final TextEditingController emailCtlr = TextEditingController();
-  LoginCard({super.key});
+  RegisterCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class LoginCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Bienvenid@!",
+                "Regístrate :)",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 30,
@@ -49,9 +49,8 @@ class LoginCard extends StatelessWidget {
               const SizedBox(height: 40),
               const SizedBox(
                 width: double.infinity,
-                child: LoginButton()),
+                child: RegisterButton()),
               const SizedBox(height: 20),
-              const RegisterHereTapGesture()
             ],
           ),
         ));
