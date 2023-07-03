@@ -11,9 +11,6 @@ class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.sizeOf(context).height / 3);
-    print(MediaQuery.sizeOf(context).height -
-                          MediaQuery.sizeOf(context).height * 2 / 3);
     return Scaffold(
         backgroundColor: ThemeColors.colorSecondary,
         body: Container(
