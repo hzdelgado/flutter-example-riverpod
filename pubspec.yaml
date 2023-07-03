@@ -43,7 +43,8 @@ dependencies:
   json_annotation: ^4.8.1
   auto_route: ^7.5.0
   dartz: ^0.10.1
-
+  flutter_riverpod: ^2.3.6
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -54,7 +55,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  flutter_riverpod: ^2.3.6
   build_runner: ^2.4.5
   freezed: ^2.3.5
   json_serializable: ^6.7.0
