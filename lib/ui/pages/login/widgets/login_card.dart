@@ -51,7 +51,7 @@ class LoginCard extends StatelessWidget {
                 width: double.infinity,
                 child: LoginButton()),
               const SizedBox(height: 20),
-              const RegisterHereTapGesture()
+              const Center(child: RegisterHereTapGesture())
             ],
           ),
         ));

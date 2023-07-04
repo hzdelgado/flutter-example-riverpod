@@ -14,6 +14,7 @@ class LoginButton extends StatelessWidget {
           AppdoptameApp.paw,
           color: ThemeColors.colorPrimary,
         ),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.white,),
         label: Text(
           "Ingresar",
           style: TextStyle(

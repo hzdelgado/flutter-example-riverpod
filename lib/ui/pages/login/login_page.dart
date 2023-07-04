@@ -11,11 +11,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: ThemeColors.colorSecondary,
+        backgroundColor: ThemeColors.colorPrimary,
         body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  opacity: .3,
+                  opacity: .05,
                   image: AssetImage("assets/background.png"),
                   fit: BoxFit.cover),
             ),
@@ -23,7 +23,13 @@ class LoginPage extends StatelessWidget {
                 height: MediaQuery.sizeOf(context).height,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [LoginCard()],
+                  children: [
+                    Image.asset(
+                      'assets/logo_white.png',
+                      width: MediaQuery.sizeOf(context).width * 2/3,
+                    ),
+                    LoginCard(),
+                  ],
                 ))));
   }
 }

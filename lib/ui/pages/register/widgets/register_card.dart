@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_example_riverpod/ui/pages/register/widgets/login_link.dart';
 import 'package:flutter_example_riverpod/ui/pages/register/widgets/register_button.dart';
 
 import '../../../theme/colors.dart';
@@ -51,6 +52,7 @@ class RegisterCard extends StatelessWidget {
                 width: double.infinity,
                 child: RegisterButton()),
               const SizedBox(height: 20),
+              const Center(child: LoginHereTapGesture())
             ],
           ),
         ));

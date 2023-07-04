@@ -12,13 +12,13 @@ class RegisterButton extends StatelessWidget {
         onPressed: () {},
         icon: Icon(
           AppdoptameApp.paw,
-          color: ThemeColors.colorSecondary,
+          color: ThemeColors.colorPrimary,
         ),
-        style: ElevatedButton.styleFrom(backgroundColor: ThemeColors.colorPrimary),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
         label: Text(
-          "Ingresar",
+          "Completar",
           style: TextStyle(
-              color: ThemeColors.colorSecondary,
+              color: ThemeColors.colorPrimary,
               fontSize: ThemeFontSize.fontSizeSm,
               fontWeight: FontWeight.w700),
         ));

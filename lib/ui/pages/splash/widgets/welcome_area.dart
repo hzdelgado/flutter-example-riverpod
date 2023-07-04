@@ -14,7 +14,7 @@ class WelcomeArea extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              'assets/logo.png',
+              'assets/logo_white.png',
               width: 120,
             ),
             const SizedBox(
