@@ -17,7 +17,6 @@ class LoginCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final status = ref.watch(loginProvider).status;
     ref.listen(
       loginProvider.select((value) => value),
       ((previous, next) {
@@ -65,17 +64,13 @@ class LoginCard extends ConsumerWidget {
                   const SizedBox(height: 20),
                   PasswordField(
                     controller: passCltr,
+                    hidden: true,
                   ),
                   const SizedBox(height: 40),
-                  status == AuthState.loading
-                      ? const CircularProgressIndicator()
-                      : SizedBox(
-                          width: double.infinity,
-                          child: LoginButton(
-                              loginFormKey,
-                              emailCtlr.text.trim(),
-                              passCltr.text.trim(),
-                              ref)),
+                  SizedBox(
+                      width: double.infinity,
+                      child:
+                          LoginButton(loginFormKey, emailCtlr, passCltr, ref)),
                   const SizedBox(height: 20),
                   const Center(child: RegisterHereTapGesture())
                 ],

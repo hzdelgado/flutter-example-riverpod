@@ -10,6 +10,7 @@ class LoginNotifier extends StateNotifier<LoginState> {
   LoginNotifier(this.authenticationRepository) : super(const LoginState());
 
   Future<void> loginUser(String email, String password) async {
+  
     state = state.copyWith(status: AuthState.loading);
     final response = await authenticationRepository.signIn(email, password);
     response.fold((l) {

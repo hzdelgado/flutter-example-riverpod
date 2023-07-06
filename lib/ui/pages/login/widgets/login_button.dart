@@ -7,17 +7,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class LoginButton extends StatelessWidget {
   final GlobalKey<FormState> formKey;
-  final String email;
-  final String password;
+  final TextEditingController emailCtr;
+  final TextEditingController passCltr;
   final WidgetRef ref;
-  const LoginButton(this.formKey, this.email, this.password, this.ref, {super.key});
+  const LoginButton(this.formKey, this.emailCtr, this.passCltr, this.ref,
+      {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  ElevatedButton.icon(
+    return ElevatedButton.icon(
         onPressed: () {
-          if(formKey.currentState != null && formKey.currentState!.validate()) {
-            ref.read(loginProvider.notifier).loginUser(email, password);
+          if (formKey.currentState != null &&
+              formKey.currentState!.validate()) {
+            ref.read(loginProvider.notifier).loginUser(emailCtr.text.trim(), passCltr.text.trim());
           }
         },
         icon: Icon(
