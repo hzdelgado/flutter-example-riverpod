@@ -26,6 +26,7 @@ class PasswordField extends StatelessWidget {
             return 'Ingrese su contraseña';
           }
           if (value.length < 6) return "La contraseña es corta";
+          return null;
         },
         obscureText: hidden ?? false,
       )

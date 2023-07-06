@@ -18,7 +18,8 @@ class FirebaseRepository extends AuthenticationRepository {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       return Right(_auth.currentUser);
     } on FirebaseAuthException catch (e) {
-      return Left(AppException(e.code, e.message));
+      print(e.code);
+      return Left(AppException(e.message, e.code,));
     }
   }
 
@@ -30,7 +31,7 @@ class FirebaseRepository extends AuthenticationRepository {
           email: email, password: password);
       return Right(_auth.currentUser);
     } on FirebaseAuthException catch (e) {
-      return Left(AppException(e.code, e.message));
+      return Left(AppException(e.message, e.code));
     }
   }
 }

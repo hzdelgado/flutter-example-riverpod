@@ -1,7 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_example_riverpod/ui/pages/login/widgets/login_card.dart';
-
 import '../../theme/colors.dart';
 
 @RoutePage()
@@ -10,6 +9,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
         backgroundColor: ThemeColors.colorPrimary,
         body: Container(
@@ -21,15 +21,16 @@ class LoginPage extends StatelessWidget {
             ),
             child: SizedBox(
                 height: MediaQuery.sizeOf(context).height,
-                child: Column(
+                child: SafeArea(
+                    child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Image.asset(
                       'assets/logo_white.png',
-                      width: MediaQuery.sizeOf(context).width * 2/3,
+                      width: MediaQuery.sizeOf(context).width * 2 / 3,
                     ),
                     LoginCard(),
                   ],
-                ))));
+                )))));
   }
 }

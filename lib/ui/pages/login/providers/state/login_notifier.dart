@@ -7,11 +7,19 @@ import 'package:flutter_example_riverpod/ui/pages/login/providers/state/login_st
 
 class LoginNotifier extends StateNotifier<LoginState> {
   final AuthenticationRepository authenticationRepository;
-  LoginNotifier(this.authenticationRepository): super(const LoginState());
+  LoginNotifier(this.authenticationRepository) : super(const LoginState());
 
-  Future<void> loginUser(String username, String password) async {
-    
+  Future<void> loginUser(String email, String password) async {
+    state = state.copyWith(status: AuthState.loading);
+    final response = await authenticationRepository.signIn(email, password);
+    response.fold((l) {
+      state = state.copyWith(status: AuthState.failure, exception: l);
+    }, (r) {
+      if(r != null) {
+        state = state.copyWith(status: AuthState.success);
+      } else {
+        state = state.copyWith(status: AuthState.failure);
+      }
+    });
   }
-  
-
 }
