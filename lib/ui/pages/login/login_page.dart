@@ -21,8 +21,7 @@ class LoginPage extends StatelessWidget {
             ),
             child: SizedBox(
                 height: MediaQuery.sizeOf(context).height,
-                child: SafeArea(
-                    child: Column(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Image.asset(
@@ -31,6 +30,6 @@ class LoginPage extends StatelessWidget {
                     ),
                     LoginCard(),
                   ],
-                )))));
+                ))));
   }
 }

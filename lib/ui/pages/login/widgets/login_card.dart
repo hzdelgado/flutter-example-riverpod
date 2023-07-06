@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/providers/login_provider.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/providers/state/login_state.dart';
-import 'package:flutter_example_riverpod/ui/pages/login/register_link.dart';
+import 'package:flutter_example_riverpod/domain/providers/auth_provider.dart';
+import 'package:flutter_example_riverpod/domain/providers/state/auth_state.dart';
+import 'package:flutter_example_riverpod/ui/pages/login/widgets/register_link.dart';
 import 'package:flutter_example_riverpod/ui/pages/login/widgets/email_field.dart';
 import 'package:flutter_example_riverpod/ui/pages/login/widgets/login_button.dart';
 import 'package:flutter_example_riverpod/ui/pages/login/widgets/password_field.dart';
@@ -18,9 +18,9 @@ class LoginCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen(
-      loginProvider.select((value) => value),
+      authProvider.select((value) => value),
       ((previous, next) {
-        if (next.status == AuthState.failure) {
+        if (next.status == AuthStatus.failure) {
           ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(next.exception!.message.toString())));
         } else {
@@ -47,7 +47,7 @@ class LoginCard extends ConsumerWidget {
                   topLeft: Radius.circular(25), topRight: Radius.circular(25))),
           child: Form(
               key: loginFormKey,
-              child: Column(
+              child: SafeArea(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -74,7 +74,7 @@ class LoginCard extends ConsumerWidget {
                   const SizedBox(height: 20),
                   const Center(child: RegisterHereTapGesture())
                 ],
-              )),
+              ))),
         ));
   }
 }

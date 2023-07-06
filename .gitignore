@@ -106,3 +106,9 @@ flutter_*.png
 linked_*.ds
 unlinked.ds
 unlinked_spec.ds
+
+# ignore generated mocks
+**/*.mocks.dart
+
+# ignore generated files with build runner
+**/**/**/*.freezed.dart
