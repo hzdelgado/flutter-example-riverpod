@@ -20,11 +20,13 @@ class LoginCard extends ConsumerWidget {
     ref.listen(
       authProvider.select((value) => value),
       ((previous, next) {
-        if (next.status == AuthStatus.failure) {
-          ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(next.exception!.message.toString())));
-        } else {
-          context.router.pushNamed('/home');
+        if (context.router.current.path == "/login") {
+          if (next.status == AuthStatus.failure) {
+            ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(next.exception!.message.toString())));
+          } else if (next.status == AuthStatus.success) {
+            context.router.pushNamed('/home');
+          }
         }
       }),
     );
@@ -47,7 +49,8 @@ class LoginCard extends ConsumerWidget {
                   topLeft: Radius.circular(25), topRight: Radius.circular(25))),
           child: Form(
               key: loginFormKey,
-              child: SafeArea(child: Column(
+              child: SafeArea(
+                  child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(

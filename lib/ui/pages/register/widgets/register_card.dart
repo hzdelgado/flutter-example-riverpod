@@ -21,11 +21,13 @@ class RegisterCard extends ConsumerWidget {
     ref.listen(
       authProvider.select((value) => value),
       ((previous, next) {
-        if (next.status == AuthStatus.failure) {
-          ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(next.exception!.message.toString())));
-        } else {
-          context.router.pushNamed('/home');
+        if (context.router.current.path == "/register") {
+          if (next.status == AuthStatus.failure) {
+            ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(next.exception!.message.toString())));
+          } else if (next.status == AuthStatus.success) {
+            context.router.pushNamed('/home');
+          }
         }
       }),
     );
@@ -33,48 +35,49 @@ class RegisterCard extends ConsumerWidget {
         width: MediaQuery.sizeOf(context).width,
         height: MediaQuery.sizeOf(context).height * 2 / 3,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(3.0, 3.0),
-                  blurRadius: 6.0,
-                  color: Colors.black38,
-                ),
-              ],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25), topRight: Radius.circular(25))),
-          child: Form(
-            key: registerFormKey,
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Regístrate :)",
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 30,
-                    color: ThemeColors.colorTertiary),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(3.0, 3.0),
+                    blurRadius: 6.0,
+                    color: Colors.black38,
+                  ),
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25))),
+            child: Form(
+              key: registerFormKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Regístrate :)",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 30,
+                        color: ThemeColors.colorTertiary),
+                  ),
+                  const SizedBox(height: 20),
+                  EmailField(
+                    controller: emailCtlr,
+                  ),
+                  const SizedBox(height: 20),
+                  PasswordField(
+                    controller: passCltr,
+                    hidden: true,
+                  ),
+                  const SizedBox(height: 40),
+                  SizedBox(
+                      width: double.infinity,
+                      child: RegisterButton(
+                          registerFormKey, emailCtlr, passCltr, ref)),
+                  const SizedBox(height: 20),
+                  const Center(child: LoginHereTapGesture())
+                ],
               ),
-              const SizedBox(height: 20),
-              EmailField(
-                controller: emailCtlr,
-              ),
-              const SizedBox(height: 20),
-              PasswordField(
-                controller: passCltr,
-                hidden: true,
-              ),
-              const SizedBox(height: 40),
-              SizedBox(
-                  width: double.infinity,
-                  child: RegisterButton(
-                      registerFormKey, emailCtlr, passCltr, ref)),
-              const SizedBox(height: 20),
-              const Center(child: LoginHereTapGesture())
-            ],
-          ),)
-        ));
+            )));
   }
 }
