@@ -1,5 +1,6 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_example_riverpod/ui/pages/home/widgets/bottom_navbar.dart';
 import 'package:flutter_example_riverpod/ui/theme/colors.dart';
 
 @RoutePage()
@@ -9,14 +10,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: ThemeColors.colorSecondary,
-        body: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  opacity: .3,
-                  image: AssetImage("assets/background.png"),
-                  fit: BoxFit.cover),
-            ),
-            child: Container()));
+      backgroundColor: ThemeColors.colorSecondary,
+      body: const AutoRouter(),
+      bottomNavigationBar: const BottomNavBar(),
+    );
   }
 }
