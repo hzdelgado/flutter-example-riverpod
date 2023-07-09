@@ -4,13 +4,15 @@
     "age": "5 años",
     "gender": 0,
     "description": "Estrella esta buscando un hogar que le de el cariño que ella necesita",
-    "breed": "Mestizo"
+    "breed": "Mestizo",
+    "url": "https://cms.godsdogsrescue.org/wp-content/uploads/2023/07/20230510115454_0.png"
   },
   {
     "name": "Pancho",
     "age": "3 meses",
     "gender": 1,
     "description": "Pancho esta listo para dar amor a su nuevo dueño",
-    "breed": "Mestizo"
+    "breed": "Mestizo",
+    "url": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61566852/1/?bust=1679704609"
   }
 ]

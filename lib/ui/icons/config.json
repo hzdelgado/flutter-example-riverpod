@@ -13,12 +13,6 @@
       "src": "websymbols"
     },
     {
-      "uid": "d589e468da8556b0701206cfdfcfc567",
-      "css": "transgender",
-      "code": 61988,
-      "src": "fontawesome"
-    },
-    {
       "uid": "471497b78b90ca63aa21b13bf4c46cf4",
       "css": "female",
       "code": 59392,
@@ -41,6 +35,48 @@
       "css": "power_settings_new",
       "code": 59395,
       "src": "material"
+    },
+    {
+      "uid": "56a0672588820ab1a16363e5d07dd22e",
+      "css": "user",
+      "code": 59396,
+      "src": "linecons"
+    },
+    {
+      "uid": "484b4ad2058d17849f205c4054b6f315",
+      "css": "cog",
+      "code": 59397,
+      "src": "linecons"
+    },
+    {
+      "uid": "c2ddf03240cd0a28220e1401f8e6657f",
+      "css": "inbox",
+      "code": 59418,
+      "src": "linearicons"
+    },
+    {
+      "uid": "1c053f2670a7d52e200068161f917f84",
+      "css": "paw-1",
+      "code": 59466,
+      "src": "linearicons"
+    },
+    {
+      "uid": "814cfaca1407bf45548558e1e2815bdf",
+      "css": "menu",
+      "code": 59505,
+      "src": "linearicons"
+    },
+    {
+      "uid": "7033a790a6eba30beda282944e6bae87",
+      "css": "heart",
+      "code": 59411,
+      "src": "linearicons"
+    },
+    {
+      "uid": "e55d79482de45e2a6a01b899221c510f",
+      "css": "arrow-right",
+      "code": 59514,
+      "src": "linearicons"
     }
   ]
 }

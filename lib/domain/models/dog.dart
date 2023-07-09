@@ -1,4 +1,3 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'dog.freezed.dart';
@@ -10,10 +9,10 @@ class Dog with _$Dog {
     required String name,
     required String age,
     required int gender,
-    required String description,
-    required String breed,
+    String? description,
+    String? breed,
+    required String url,
   }) = _Dog;
 
-  factory Dog.fromJson(Map<String, Object?> json)
-  => _$DogFromJson(json);
+  factory Dog.fromJson(Map<String, Object?> json) => _$DogFromJson(json);
 }

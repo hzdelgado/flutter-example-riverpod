@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_example_riverpod/ui/theme/colors.dart';
+import 'package:flutter_example_riverpod/ui/icons/appdoptame_app_icons.dart';
+import 'package:flutter_example_riverpod/ui/pages/home/widgets/bottom_navbar/navbar_option.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
@@ -9,7 +10,7 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width,
-      height: 60,
+      height: 100,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -17,43 +18,32 @@ class BottomNavBar extends StatelessWidget {
           topRight: Radius.circular(20),
         ),
       ),
-      child: Row(
+      child:SafeArea(child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          IconButton(
+          NavBarOption(
             onPressed: () {
               context.router.pushNamed('profile');
             },
-            icon: Icon(
-              Icons.home_outlined,
-              color: ThemeColors.colorPrimary,
-              size: 35,
-            ),
+            icon: AppdoptameApp.user,
+            label: "Perfil"
           ),
-          IconButton(
+          NavBarOption(
             onPressed: () {
               context.router.pushNamed('posts');
             },
-            icon: Icon(
-              Icons.work_outline_outlined,
-              color: ThemeColors.colorPrimary,
-              size: 35,
-            ),
-            highlightColor: ThemeColors.colorPrimary,
+            icon: AppdoptameApp.inbox,
+            label: "Anuncios"
           ),
-          IconButton(
+          NavBarOption(
             onPressed: () {
               context.router.pushNamed('settings');
             },
-            color: ThemeColors.colorPrimary,
-            icon: Icon(
-              Icons.work_outline_outlined,
-              color: ThemeColors.colorPrimary,
-              size: 35,
-            ),
+            icon: AppdoptameApp.power_settings_new,
+            label: "Ajustes"
           ),
         ],
-      ),
+      )),
     );
   }
 }

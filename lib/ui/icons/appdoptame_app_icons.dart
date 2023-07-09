@@ -24,6 +24,14 @@
 ///         Author:    Google
 ///         License:   Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
 ///         Homepage:  https://design.google.com/icons/
+/// * Linecons, Copyright (C) 2013 by Designmodo
+///         Author:    Designmodo for Smashing Magazine
+///         License:   CC BY ()
+///         Homepage:  http://designmodo.com/linecons-free/
+/// * Linearicons Free, Copyright (C) Linearicons.com
+///         Author:    Perxis
+///         License:   CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+///         Homepage:  https://linearicons.com
 /// * Font Awesome 4, Copyright (C) 2016 by Dave Gandy
 ///         Author:    Dave Gandy
 ///         License:   SIL ()
@@ -41,6 +49,12 @@ class AppdoptameApp {
   static const IconData heart_1 = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData male = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData power_settings_new = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData user = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData cog = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart = IconData(0xe813, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData inbox = IconData(0xe81a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData paw_1 = IconData(0xe84a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData menu = IconData(0xe871, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData arrow_right = IconData(0xe87a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData paw = IconData(0xf1b0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData transgender = IconData(0xf224, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

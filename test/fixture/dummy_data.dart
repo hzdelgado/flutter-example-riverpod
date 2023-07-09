@@ -17,6 +17,7 @@ List<Dog> generateDummyPosts() {
         age: "1 año",
         gender: 0,
         description: "Test",
-        breed: "Test")
+        breed: "Test",
+        url: "")
   ];
 }
