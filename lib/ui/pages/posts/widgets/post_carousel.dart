@@ -6,11 +6,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 class PostCarousel extends StatelessWidget {
   final List<Dog> posts;
-  const PostCarousel(this.posts, {super.key});
+  final CarouselController carouselController;
+  const PostCarousel(this.posts, {super.key, required this.carouselController});
 
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(child: CarouselSlider(
+      carouselController: carouselController,
       options: CarouselOptions(
         height: MediaQuery.sizeOf(context).height/2,
         aspectRatio: 2.0,

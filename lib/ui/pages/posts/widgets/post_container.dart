@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example_riverpod/domain/models/dog.dart';
-import 'package:flutter_example_riverpod/ui/icons/appdoptame_app_icons.dart';
 import 'package:flutter_example_riverpod/ui/pages/posts/widgets/gender_icon.dart';
 import 'package:flutter_example_riverpod/ui/theme/colors.dart';
 import 'package:flutter_example_riverpod/ui/theme/font_size.dart';
