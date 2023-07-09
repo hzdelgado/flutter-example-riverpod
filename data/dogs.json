@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Estrella",
+    "age": "5 años",
+    "gender": 0,
+    "description": "Estrella esta buscando un hogar que le de el cariño que ella necesita",
+    "breed": "Mestizo"
+  },
+  {
+    "name": "Pancho",
+    "age": "3 meses",
+    "gender": 1,
+    "description": "Pancho esta listo para dar amor a su nuevo dueño",
+    "breed": "Mestizo"
+  }
+]

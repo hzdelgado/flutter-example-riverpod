@@ -21,7 +21,7 @@ void main() {
 
   stateNotifierTest<AuthNotifier, AuthState>(
     'Should throw AppException on sign in with Firebase',
-    build: () => AuthNotifier(repository),
+    build: () => notifier,
     setUp: () {
       when(repository.signIn("", ""))
           .thenAnswer((_) async => Left(ktestAppException));

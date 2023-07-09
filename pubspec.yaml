@@ -43,6 +43,7 @@ dependencies:
   auto_route: ^7.5.0
   dartz: ^0.10.1
   flutter_riverpod: ^2.3.6
+  carousel_slider: ^4.2.1
   
 dev_dependencies:
   flutter_test:

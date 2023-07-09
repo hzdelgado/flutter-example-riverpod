@@ -8,8 +8,8 @@ part 'dog.g.dart';
 class Dog with _$Dog {
   const factory Dog({
     required String name,
-    required int age,
-    required String gender,
+    required String age,
+    required int gender,
     required String description,
     required String breed,
   }) = _Dog;
