@@ -1,6 +1,6 @@
 # Pet Adoption App
 
-Flutter app of a pet adoption app using Riverpod as state management, I also use: auto_route. freezed, dartz, carousel_slider, and Firebase for authentication. Spanish because is my mother tongue, therefore, no english.
+Flutter app of a pet adoption app using Riverpod as state management, I also use: auto_route. freezed, dartz, carousel_slider, and Firebase for authentication.
 
 # Motivation
 
