@@ -1,6 +1,6 @@
-# Pet Adoption App
+# Appdoptame - Flutter Pet Adoption App
 
-Flutter app of a pet adoption app using Riverpod as state management, I also use: auto_route. freezed, dartz, carousel_slider, and Firebase for authentication.
+Flutter adoption app created with Riverpod for state management, I'm also using: auto_route for routing. freezed, dartz, carousel_slider, and Firebase for authentication.
 
 # Motivation
 
@@ -19,3 +19,4 @@ I created this project to explore and play with the Riverpod package. You're fre
 ## Things to improve
 
 - Responsiveness.
+- Tests - Not full coverage.
