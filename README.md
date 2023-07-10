@@ -2,7 +2,7 @@
 
 Flutter adoption app created with Riverpod for state management, I'm also using: auto_route for routing. freezed, dartz, carousel_slider, and Firebase for authentication.
 
-# Motivation
+## Motivation
 
 I created this project to explore and play with the Riverpod package. You're free to use it as you like :).
 
