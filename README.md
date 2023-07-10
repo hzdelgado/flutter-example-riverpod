@@ -1,16 +1,21 @@
-# flutter_example_riverpod
+# Pet Adoption App
 
-A new Flutter project.
+Flutter app of a pet adoption app using Riverpod as state management, I also use: auto_route. freezed, dartz, carousel_slider, and Firebase for authentication. Spanish because is my mother tongue, therefore, no english.
+
+# Motivation
+
+I created this project to explore and play with the Riverpod package. You're free to use it as you like :).
 
 ## Getting Started
+```
+- flutter pub run build_runner build.
+- flutter run.
+```
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![imgonline-com-ua-twotoone-WazRhiviptL](https://github.com/hzdelgado/flutter-example-riverpod/assets/88523514/2ebc981a-6f73-4a42-a291-b2804fd7b9e2)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Things to improve
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Responsiveness.
